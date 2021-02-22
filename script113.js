@@ -4,3 +4,7 @@
 
 test1(){ };
 test2(){ };
+console.log(123);
+if (){
+  
+}
