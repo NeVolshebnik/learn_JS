@@ -7,8 +7,8 @@ console.log(result);
 
 function every(arr, callback) {
     for (elem of arr) {
-        if (callback) {
-
+        if (!callback(elem)) {
+return false;
         }
     }
 
