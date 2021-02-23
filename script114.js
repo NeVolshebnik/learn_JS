@@ -50,3 +50,7 @@ function getSumDigits(arr) {
     }
     return sum;
 }
+
+function getDigitsSum(num) {
+
+}
