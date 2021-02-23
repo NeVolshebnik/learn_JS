@@ -13,3 +13,4 @@ function every(arr, callback) {
     }
     return true;
 }
+
