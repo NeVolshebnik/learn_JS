@@ -36,21 +36,3 @@ function func1(prevPrevNum, prevNum) {
 let arr = [];
 console.log('=== №114.2 ===');
 console.log(func1(1, 2)); // выведет массив чисел
-
-// === №114.3 ===
-
-function getArrayDigits(num) {
-    return String(num).split('');
-}
-
-function getSumDigits(arr) {
-    let sum = 0;
-    for (let elem of arr) {
-        sum += elem;
-    }
-    return sum;
-}
-
-function getDigitsSum(num) {
-
-}
