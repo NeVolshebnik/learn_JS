@@ -203,6 +203,14 @@ let arr5 = [1, [2, 3], 4, [5, 6, [7, 8, [9, 10]]],
 
 function getNestingLevelMax(arr) {
 
+
+    return result;
+}
+
+function getNestingLevelArray(arr) {
+
+
+    return result;
 }
 
 console.log(getNestingLevelMax(arr5));
