@@ -1,6 +1,8 @@
-"use strict";
+//"use strict";
 
 // === №115.1 ===
+
+console.log('');
 console.log('// === №115.1 ===');
 
 let obj = {
@@ -34,6 +36,8 @@ function displayPrimitives(obj) {
 displayPrimitives(obj);
 
 // === №115.2 ===
+
+console.log('');
 console.log('// === №115.2 ===');
 
 function sumPrimitives(obj) {
@@ -53,6 +57,8 @@ function sumPrimitives(obj) {
 console.log(sumPrimitives(obj));
 
 // === №115.3 ===
+
+console.log('');
 console.log('// === №115.3 ===');
 
 let arr = ['a', ['b', 'c', 'd'],
@@ -79,6 +85,7 @@ console.log(convertArrayToString(arr));
 
 // первый способ
 
+console.log('');
 console.log('// === №115.4 === первый способ');
 
 let arr1 = [1, [2, 7, 8],
@@ -103,6 +110,7 @@ console.log(getSquareArray1(arr1));
 
 // второй способ
 
+console.log('');
 console.log('// === №115.4 === второй способ');
 
 let arr2 = [1, [2, 7, 8],
@@ -124,13 +132,11 @@ function getSquareArray2(arr) {
     return result;
 }
 
-;
 console.log(getSquareArray2(arr2));
 
 // === №115.5 ===
 
-// первый способ
-
+console.log('');
 console.log('// === №115.5 ===');
 
 let arr3 = [1, [2, 7, 8],
@@ -142,10 +148,56 @@ function getArrayOfPrimitives(arr) {
 
     for (let elem of arr) {
         if (typeof elem == 'object') {
-
+            result = result.concat(getArrayOfPrimitives(elem));
         } else {
             result.push(elem);
         }
     }
     return result;
 }
+
+console.log(getArrayOfPrimitives(arr3));
+
+// === №115.6 ===
+
+console.log('');
+console.log('// === №115.6 ===');
+
+let arr4 = [1, [2, 7, 8],
+    [3, 4],
+    [5, [6, 7]]
+];
+
+function getElemWithPrimitives(arr) {
+    let result = [];
+    for (let elem of arr) {
+        if (typeof elem == 'object') {
+            result = [];
+            getElemWithPrimitives(elem);
+        } else {
+            result.push(elem);
+        }
+    }
+    if (result.length != 0) {
+        console.log(result);
+    }
+
+}
+
+getElemWithPrimitives(arr4);
+
+// === №115.7 ===
+
+console.log('');
+console.log('// === №115.7 ===');
+
+let arr5 = [1, [2, 7, 8, [12, 16, [25, 41, 61, [43, 12, 35], 32, 17], 22, 11], 99],
+    [3, 4],
+    [5, [6, 7]]
+];
+
+function getNestingLevelMax(arr) {
+
+}
+
+console.log(getNestingLevelMax(arr5));
