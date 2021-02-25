@@ -126,3 +126,9 @@ function getSquareArray2(arr) {
 
 ;
 console.log(getSquareArray2(arr2));
+
+// === №115.5 ===
+
+// первый способ
+
+console.log('// === №115.5 ===');
