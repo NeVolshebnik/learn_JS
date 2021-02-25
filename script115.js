@@ -132,3 +132,20 @@ console.log(getSquareArray2(arr2));
 // первый способ
 
 console.log('// === №115.5 ===');
+
+let arr3 = [1, [2, 7, 8],
+    [3, 4, [5, [6, 7]]]
+];
+
+function getArrayOfPrimitives(arr) {
+    let result = [];
+
+    for (let elem of arr) {
+        if (typeof elem == 'object') {
+
+        } else {
+            result.push(elem);
+        }
+    }
+    return result;
+}
