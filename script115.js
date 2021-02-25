@@ -191,13 +191,25 @@ getElemWithPrimitives(arr4);
 console.log('');
 console.log('// === №115.7 ===');
 
+/*
 let arr5 = [1, [2, 7, 8, [12, 16, [25, 41, 61, [43, 12, 35], 32, 17], 22, 11], 99],
     [3, 4],
     [5, [6, 7]]
 ];
+*/
+let arr5 = [1, [2, 3]];
 
 function getNestingLevelMax(arr) {
+    let result = 0;
+    for (let elem of arr) {
+        if (typeof elem == 'object') {
+            result++;
+            getNestingLevelMax(elem);
+        } else {
 
+        }
+    }
+    return result;
 }
 
 console.log(getNestingLevelMax(arr5));
