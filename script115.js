@@ -202,16 +202,7 @@ let arr5 = [1, [2, 3], 4, [5, 6, [7, 8, [9, 10]]],
 ];
 
 function getNestingLevelMax(arr) {
-    let nesting = 0;
-    let arrNesting = [];
-    for (let elem of arr) {
-        if (typeof elem == 'object') {
-            nesting++;
-            return nesting + getNestingLevelMax(elem);
 
-        }
-    }
-    return 0;
 }
 
 console.log(getNestingLevelMax(arr5));
