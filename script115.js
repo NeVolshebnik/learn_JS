@@ -78,6 +78,7 @@ console.log(convertArrayToString(arr));
 // === №115.4 ===
 
 // первый способ
+
 console.log('// === №115.4 === первый способ');
 
 let arr1 = [1, [2, 7, 8],
@@ -101,6 +102,7 @@ function getSquareArray1(arr) {
 console.log(getSquareArray1(arr1));
 
 // второй способ
+
 console.log('// === №115.4 === второй способ');
 
 let arr2 = [1, [2, 7, 8],
