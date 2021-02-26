@@ -6,31 +6,31 @@ console.log('');
 console.log('// === №115.1 ===');
 
 let obj = {
-    a: 1,
-    b: {
-        c: 2,
-        d: 3,
-        e: 4
-    },
-    f: {
-        g: 5,
-        j: 6,
-        k: {
-            l: 7,
-            m: {
-                n: 8,
-                o: 9
-            }
-        }
+  a: 1,
+  b: {
+    c: 2,
+    d: 3,
+    e: 4
+  },
+  f: {
+    g: 5,
+    j: 6,
+    k: {
+      l: 7,
+      m: {
+        n: 8,
+        o: 9
+      }
     }
+  }
 };
 
 function displayPrimitives(obj) {
-    for (let key in obj) {
-        if (typeof obj[key] == 'object') {
-            displayPrimitives(obj[key])
-        } else console.log(obj[key]);
-    }
+  for (let key in obj) {
+    if (typeof obj[key] == 'object') {
+      displayPrimitives(obj[key])
+    } else console.log(obj[key]);
+  }
 }
 
 displayPrimitives(obj);
@@ -41,17 +41,17 @@ console.log('');
 console.log('// === №115.2 ===');
 
 function sumPrimitives(obj) {
-    let result = 0
+  let result = 0
 
-    for (let key in obj) {
-        if (typeof obj[key] == 'object') {
-            result += sumPrimitives(obj[key])
-        } else {
-            result += obj[key];
-        }
+  for (let key in obj) {
+    if (typeof obj[key] == 'object') {
+      result += sumPrimitives(obj[key])
+    } else {
+      result += obj[key];
     }
+  }
 
-    return result;
+  return result;
 }
 
 console.log(sumPrimitives(obj));
@@ -66,17 +66,17 @@ let arr = ['a', ['b', 'c', 'd'],
 ];
 
 function convertArrayToString(arr) {
-    let result = '';
+  let result = '';
 
-    for (let elem of arr) {
-        if (typeof elem == 'object') {
-            result += convertArrayToString(elem);
-        } else {
-            result += elem;
-        }
+  for (let elem of arr) {
+    if (typeof elem == 'object') {
+      result += convertArrayToString(elem);
+    } else {
+      result += elem;
     }
+  }
 
-    return result;
+  return result;
 }
 
 console.log(convertArrayToString(arr));
@@ -94,16 +94,16 @@ let arr1 = [1, [2, 7, 8],
 ];
 
 function getSquareArray1(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] == 'object') {
-            arr[i] = getSquareArray1(arr[i]);
-            //  или так  
-            //  arr.splice(i, 1, getSquareArray1(arr[i]));
-        } else {
-            arr[i] = arr[i] ** 2;
-        }
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] == 'object') {
+      arr[i] = getSquareArray1(arr[i]);
+      //  или так  
+      //  arr.splice(i, 1, getSquareArray1(arr[i]));
+    } else {
+      arr[i] = arr[i] ** 2;
     }
-    return arr;
+  }
+  return arr;
 }
 
 console.log(getSquareArray1(arr1));
@@ -119,17 +119,17 @@ let arr2 = [1, [2, 7, 8],
 ];
 
 function getSquareArray2(arr) {
-    let result = [];
-    for (let elem of arr) {
-        if (typeof elem == 'object') {
-            result.push(getSquareArray2(elem));
+  let result = [];
+  for (let elem of arr) {
+    if (typeof elem == 'object') {
+      result.push(getSquareArray2(elem));
 
-        } else {
-            result.push(elem ** 2)
-            let a = 0;
-        }
+    } else {
+      result.push(elem ** 2)
+      let a = 0;
     }
-    return result;
+  }
+  return result;
 }
 
 console.log(getSquareArray2(arr2));
@@ -144,16 +144,16 @@ let arr3 = [1, [2, 7, 8],
 ];
 
 function getArrayOfPrimitives(arr) {
-    let result = [];
+  let result = [];
 
-    for (let elem of arr) {
-        if (typeof elem == 'object') {
-            result = result.concat(getArrayOfPrimitives(elem));
-        } else {
-            result.push(elem);
-        }
+  for (let elem of arr) {
+    if (typeof elem == 'object') {
+      result = result.concat(getArrayOfPrimitives(elem));
+    } else {
+      result.push(elem);
     }
-    return result;
+  }
+  return result;
 }
 
 console.log(getArrayOfPrimitives(arr3));
@@ -169,18 +169,18 @@ let arr4 = [1, [2, 7, 8],
 ];
 
 function getElemWithPrimitives(arr) {
-    let result = [];
-    for (let elem of arr) {
-        if (typeof elem == 'object') {
-            result = [];
-            getElemWithPrimitives(elem);
-        } else {
-            result.push(elem);
-        }
+  let result = [];
+  for (let elem of arr) {
+    if (typeof elem == 'object') {
+      result = [];
+      getElemWithPrimitives(elem);
+    } else {
+      result.push(elem);
     }
-    if (result.length != 0) {
-        console.log(result);
-    }
+  }
+  if (result.length != 0) {
+    console.log(result);
+  }
 
 }
 
@@ -202,18 +202,23 @@ let arr5 = [1, [2, 3], 4, [5, 6, [7, 8, [9, 10]]],
 ];
 
 function getNestingLevelMax(arr) {
- let maxLevel=0;
-for(let elem of arr){
-  maxLevel+=getNestingLevel(elem,1)
+  let level = 0;
+  let maxLevel = 0;
+  for (let elem of arr) {
+    if (typeof elem == 'object') {
+      maxLevel++;
+      //maxLevel += getNestingLevel(elem, 1)
+    }
+
+  }
+
+  return maxLevel;
 }
 
-    return maxLevel;
-}
-
-function getNestingLevel(arr,startNesting) {
+function getNestingLevel(arr, startNesting) {
 
 
-    return result;
+  return result;
 }
 
 console.log(getNestingLevelMax(arr5));
