@@ -202,12 +202,15 @@ let arr5 = [1, [2, 3], 4, [5, 6, [7, 8, [9, 10]]],
 ];
 
 function getNestingLevelMax(arr) {
-
-
-    return result;
+ let maxLevel=0;
+for(let elem of arr){
+  maxLevel+=getNestingLevel(elem,1)
 }
 
-function getNestingLevelArray(arr) {
+    return maxLevel;
+}
+
+function getNestingLevel(arr,startNesting) {
 
 
     return result;
