@@ -25,3 +25,8 @@ console.log(result);
 function unite(arr1, arr2, arr3) {
     return [arr1, arr2, arr3];
 }
+
+// === №125.2 ===
+
+console.log('');
+console.log('// === №125.2 ===');
