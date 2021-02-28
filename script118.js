@@ -60,3 +60,14 @@ let arr6 = [1, 2, [3, 4], 5, [6, 7]];
 let getPrimitive = elem => typeof elem != 'object';
 
 console.log(arr6.filter(getPrimitive));
+
+// === №118.7 ===
+
+console.log('');
+console.log('// === №118.7 ===');
+
+let arr7 = [1, -2, 3, -4, 5, -6, -7, 8, -9, -10, 11, 12];
+
+let getNegatives = arr7.filter(elem => elem < 0);
+
+console.log(getNegatives.length);
