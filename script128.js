@@ -50,15 +50,37 @@ let [name4, surname4, ...info] = arr4;
 console.log('');
 console.log('// === №128.5 ===');
 
-let arr = ['Иван', 'Иванов', 'отдел разработки', 'программист'];
+let arr5 = ['Иван', 'Иванов', 'отдел разработки', 'программист'];
+/*
+let name5 = arr5[0];
+let surname5 = arr5[1];
+let department5 = arr5[2];
 
-let name = arr[0];
-let surname = arr[1];
-let department = arr[2];
-
-let position;
-if (arr[3] !== undefined) {
-    position = arr[3];
+let position5;
+if (arr5[3] !== undefined) {
+    position5 = arr5[3];
 } else {
-    position = 'джуниор';
+    position5 = 'джуниор';
+}
+*/
+let [name5, surname5, department5, position5 = 'джуниор'] = arr5;
+
+// === №128.6 ===
+
+console.log('');
+console.log('// === №128.6 ===');
+
+let arr6 = [2025, 12, 31];
+let [year = getYear(), month = getMonth(), day = getDate()] = arr6;
+
+function getYear() {
+    return new Date().getFullYear();
+}
+
+function getMonth() {
+    return new Date().getMonth() + 1;
+}
+
+function getDate() {
+    return new Date().getDate();
 }
