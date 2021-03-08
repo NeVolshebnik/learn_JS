@@ -68,8 +68,10 @@ let year  = hired[0];
 let month = hired[1];
 let day   = hired[2];
 */
-    hired = hired.split('-');
-    let [year, month, day] = hired;
+    function getHiredToArray(hiredString) {
+        return hiredString.split('-');
+    }
+    let [year, month, day] = getHiredToArray(hired);
 }
 
 func4('отдел разработки', ['Иван', 'Иванов'], '2018-12-31');
@@ -79,10 +81,33 @@ func4('отдел разработки', ['Иван', 'Иванов'], '2018-12-
 console.log('');
 console.log('// === №130.5 ===');
 
-function func({ year, month, day }) {
-    console.log(year); // выведет 2025
-    console.log(month); // выведет 12
-    console.log(day); // выведет 31
+function func5({ color, width, height }) {
+    /*
+    let color  = options.color;
+    let width  = options.width;
+    let height = options.height;
+    */
 }
 
-func({ year: 2025, month: 12, day: 31, });
+func5({ color: 'red', width: 400, height: 500 });
+
+// === №130.6 ===
+
+console.log('');
+console.log('// === №130.6 ===');
+
+function func6({ width, height, color = 'black' }) {
+    /*
+let width = options.width;
+let height = options.height;
+
+let color;
+if (options.color !== undefined) {
+    color = options.color;
+} else {
+    color = 'black';
+}
+*/
+}
+
+func6({ color: 'red', width: 400, height: 500 });
