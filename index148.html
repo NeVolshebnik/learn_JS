@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ============= 148.1 ============= -->
+    <p>=== 148.1 ===</p>
+
+    <p id="elem1">1</p>
+    <p id="elem2">2</p>
+    <p id="elem3">3</p>
+
+    <!-- ============= 148.2 ============= -->
+    <p>=== 148.2 ===</p>
+
+    <div id="block">
+        <p>1</p>
+        <p>2</p>
+    </div>
+
+    <!-- ============= 148.3 ============= -->
+    <p>=== 148.3 ===</p>
+
+    <div class="block">
+        <p>1</p>
+        <p>2</p>
+    </div>
+
+    <!-- ============= 148.4 ============= -->
+    <p>=== 148.4 ===</p>
+
+    <p class="www">text</p>
+    <p class="www">text</p>
+
+    <script>
+        //  ============= 148.1 =============
+        console.log('\n// === №148.1 ===');
+
+        let p1 = document.querySelector('#elem1');
+        let p2 = document.querySelector('#elem2');
+        let p3 = document.querySelector('#elem3');
+
+        console.log(p1);
+        console.log(p2);
+        console.log(p3);
+
+        //  ============= 148.2 =============
+        console.log('\n// === №148.2 ===');
+
+        let elem = document.querySelector('#block p');
+        console.log(elem);
+
+        //  ============= 148.3 =============
+        console.log('\n// === №148.3 ===');
+
+        elem = document.querySelector('.block p')
+        console.log(elem);
+
+        //  ============= 148.4 =============
+        console.log('\n// === №148.4 ===');
+
+        elem = document.querySelector('.www');
+        console.log(elem);
+    </script>
+
+</body>
+
+</html>

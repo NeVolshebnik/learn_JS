@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ============= 153.1 ============= -->
+    <p>=== 153.1 ===</p>
+
+    <p id="elem">text</p>
+
+    <!-- ============= 153.2 ============= -->
+    <p>=== 153.2 ===</p>
+
+    <input id="button" type="submit">
+
+    <script>
+        //  ============= 153.1 =============
+        console.log('\n// === №153.1 ===');
+
+        let elem = document.querySelector('#elem');
+        elem.addEventListener('click', func1);
+        elem.addEventListener('click', func2);
+        elem.addEventListener('click', func3)
+
+        function func1() {
+            alert('1');
+        }
+
+        function func2() {
+            alert('2');
+        }
+
+        function func3() {
+            alert('3');
+        }
+
+        //  ============= 153.1 =============
+        console.log('\n// === №153.1 ===');
+
+        elem = document.querySelector('#button');
+        elem.addEventListener('dblclick', () => alert(1));
+        elem.addEventListener('dblclick', () => alert(2));
+        elem.addEventListener('dblclick', function() {
+            alert(3);
+        });
+    </script>
+
+</body>
+
+</html>

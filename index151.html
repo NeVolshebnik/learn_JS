@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ============= 151.1 ============= -->
+    <p>=== 151.1 ===</p>
+
+    <input id="button1" type="submit" value="button1">
+    <input id="button2" type="submit" value="button2">
+
+    <script>
+        //  ============= 151.1 =============
+        console.log('\n// === №151.1 ===');
+
+        let button = document.querySelector('#button1');
+        button.addEventListener('click', func1);
+
+        button = document.querySelector('#button2');
+        button.addEventListener('click', func2);
+
+        function func1() {
+            alert(1);
+        }
+
+        function func2() {
+            alert(2);
+        }
+    </script>
+
+</body>
+
+</html>
