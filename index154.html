@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ============= 154.1 ============= -->
+    <p>=== 154.1 ===</p>
+
+    <p id="elem1">3</p>
+    <p id="elem2">5</p>
+
+    <button id="button">Сложить</button>
+
+    <!-- ============= 154.2 ============= -->
+    <p>=== 154.2 ===</p>
+
+    <p id='elem3'>Первый абзац</p>
+    <p id='elem4'>Второй абзац</p>
+    <button id='button1'>Кнопка 1</button>
+    <button id='button2'>Кнопка 2</button>
+
+    <!-- ============= 154.3 ============= -->
+    <p>=== 154.3 ===</p>
+
+    <p id='elem5'><br></p>
+    <button id='button3'>Я пришёл</button>
+    <button id='button4'>Я ухожу</button>
+
+    <!-- ============= 154.4 ============= -->
+    <p>=== 154.4 ===</p>
+
+    <p id='elem6'>text1</p>
+    <p id='elem7'>text2</p>
+    <p id='elem8'>text3</p>
+
+    <!-- ============= 154.5 ============= -->
+    <p>=== 154.5 ===</p>
+
+    <p id=elem9>8</p>
+    <button id='button5'>SQR</button>
+
+    <!-- ============= 154.6 ============= -->
+    <p>=== 154.6 ===</p>
+
+    <p id='elem10'>48</p>
+    <button id='button6'>+1</button>
+
+    <!-- ============= 154.7 ===  154.8  ========== -->
+    <p>=== 154.7 === 154.8 ===</p>
+
+    <p id='elem11'>Ура</p>
+    <button id='button8'>"!" в начало</button>
+    <button id='button7'>"!" в конец</button>
+
+    <!-- ============= 154.9 ============= -->
+    <p>=== 154.9 ===</p>
+
+    <p id='elem12'><br></p>
+    <button id='button9'>Нажми</button>
+
+    <!-- ============= 154.10 ============= -->
+    <p>=== 154.10 ===</p>
+
+    <p id='elem13'>Здесь какой-то текст</p>
+    <button id='button10'>Нажми меня</b></button>
+
+    <script>
+        //  ============= 154.1 =============
+        console.log('\n// === №154.1 ===');
+
+        let button = document.querySelector('#button');
+        let elem1 = document.querySelector('#elem1');
+        let elem2 = document.querySelector('#elem2');
+
+        button.addEventListener('click', sum);
+
+        function sum() {
+            alert(Number(elem1.innerHTML) + Number(elem2.innerHTML));
+        }
+
+        //  ============= 154.2 =============
+        console.log('\n// === №154.2 ===');
+
+        let elem3 = document.querySelector('#elem3');
+        let elem4 = document.querySelector('#elem4');
+        let button1 = document.querySelector('#button1');
+        let button2 = document.querySelector('#button2');
+
+        button1.addEventListener('click', () => alert(elem3.innerHTML));
+        button2.addEventListener('click', () => alert(elem4.innerHTML));
+
+        //  ============= 154.3 =============
+        console.log('\n// === №154.3 ===');
+
+        elem5 = document.querySelector('#elem5');
+        let button3 = document.querySelector('#button3');
+        let button4 = document.querySelector('#button4');
+
+        button3.addEventListener('click', () => {
+            elem5.innerHTML = 'Привет!';
+        });
+        button4.addEventListener('click', () => {
+            elem5.innerHTML = 'Пока!'
+        });
+
+        //  ============= 154.4 =============
+        console.log('\n// === №154.4 ===');
+
+        let elem6 = document.querySelector('#elem6');
+        let elem7 = document.querySelector('#elem7');
+        let elem8 = document.querySelector('#elem8');
+
+        elem6.addEventListener('click', () => {
+            elem6.innerHTML = 1;
+        });
+        elem7.addEventListener('click', () => {
+            elem7.innerHTML = 2;
+        });
+        elem8.addEventListener('click', () => {
+            elem8.innerHTML = 3;
+        });
+
+        //  ============= 154.5 =============
+        console.log('\n// === №154.5 ===');
+
+        let elem9 = document.querySelector('#elem9');
+        let button5 = document.querySelector('#button5');
+
+        button5.addEventListener('click', () => {
+            elem9.innerHTML = elem9.innerHTML ** 2;
+        })
+
+        //  ============= 154.6 =============
+        console.log('\n// === №154.6 ===');
+
+        let elem10 = document.querySelector('#elem10');
+        let button6 = document.querySelector('#button6');
+
+        button6.addEventListener('click', () => {
+            elem10.innerHTML = ++elem10.innerHTML;
+        });
+
+        //  ============= 154.7 =============
+        console.log('\n// === №154.7 ===');
+
+        let elem11 = document.querySelector('#elem11');
+        let button7 = document.querySelector('#button7');
+
+        button7.addEventListener('click', () => {
+            elem11.innerHTML += '!';
+        });
+
+        //  ============= 154.8 =============
+        console.log('\n// === №154.8 ===');
+
+        let button8 = document.querySelector('#button8');
+        button8.addEventListener('click', () => {
+            elem11.innerHTML = '!' + elem11.innerHTML;
+        });
+
+        //  ============= 154.9 =============
+        console.log('\n// === №154.9 ===');
+
+        let elem12 = document.querySelector('#elem12');
+        let button9 = document.querySelector('#button9');
+
+        button9.addEventListener('click', () => {
+            elem12.innerHTML = '<i>hello</i>';
+        });
+
+        //  ============= 154.10 =============
+        console.log('\n// === №154.10 ===');
+
+        let elem13 = document.querySelector('#elem13');
+        let button10 = document.querySelector('#button10');
+
+        button10.addEventListener('click', () => {
+            elem13.innerHTML = `<b>${elem13.innerHTML}</b>`
+        });
+    </script>
+
+</body>
+
+</html>
