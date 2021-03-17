@@ -8,12 +8,123 @@
 </head>
 
 <body>
-    <!-- ============= 155.1 ============= -->
-    <p>=== 155.1 ===</p>
+    <!-- ============= 156.1 ============= -->
+    <p>=== 156.1 ===</p>
+
+    <input id="elem" value="text">
+    <button id="button">Нажми</button>
+
+    <!-- ============= 156.2 ============= -->
+    <p>=== 156.2 ===</p>
+
+    <input id="elem2">
+    <button id="button2">Нажми</button>
+
+    <!-- ============= 156.3 ============= -->
+    <p>=== 156.3 ===</p>
+
+    <input id="input3" value="Введи текст">
+    <p id="p3"><br></p>
+    <button id="button3">Нажми</button>
+
+    <!-- ============= 156.4 ============= -->
+    <p>=== 156.4 ===</p>
+
+    <input id="input41" value="1">
+    <input id="input42">
+    <button id="button4" style="margin-top: 1em;">Возвести в квадрат</button>
+
+    <!-- ============= 156.5 ============= -->
+    <p>=== 156.5 ===</p>
+
+    <input id="input51">
+    <input id="input52">
+    <button id="button5" style="margin-top: 1em;">Поменять местами</button>
+
+    <!-- ============= 156.7 ============= -->
+    <p>=== 156.7 ===</p>
+    <div id="test">
+        <input id="input71" type="number">
+        <input id="input72" type="number">
+        <input id="input73" type="number">
+        <input id="input74" type="number">
+        <input id="input75" type="number">
+    </div>
+    <p id="p7"></p>
+    <button id="button7" style="margin-top: 0px;">Среднее арифметическое</button>
 
     <script>
-        //  ============= 155.1 =============
-        console.log('\n// === №155.1 ===');
+        //  ============= 156.1 =============
+        console.log('\n// === №156.1 ===');
+
+        let button = document.querySelector('#button');
+        button.addEventListener('click', () => {
+            console.log(document.querySelector('#elem').value);
+        });
+
+        //  ============= 156.2 =============
+        console.log('\n// === №156.2 ===');
+
+        let button2 = document.querySelector('#button2');
+        button2.addEventListener('click', () => {
+            document.querySelector('#elem2').value = 'Записываю сюда какой-нибудь текст'
+        });
+
+        //  ============= 156.3 =============
+        console.log('\n// === №156.3 ===');
+
+        let button3 = document.querySelector('#button3');
+        let p3 = document.querySelector('#p3');
+        let input3 = document.querySelector('#input3');
+
+        button3.addEventListener('click', () => {
+            p3.innerHTML = input3.value;
+        });
+
+        //  ============= 156.4 =============
+        console.log('\n// === №156.4 ===');
+
+        let button4 = document.querySelector('#button4');
+        button4.addEventListener('click', () => {
+            document.querySelector('#input42').value = document.querySelector('#input41').value ** 2;
+        });
+
+        //  ============= 156.5 =============
+        console.log('\n// === №156.5 ===');
+
+        let button5 = document.querySelector('#button5');
+        let input51 = document.querySelector('#input51');
+        let input52 = document.querySelector('#input52');
+        button5.addEventListener('click', () => {
+            let a = input51.value;
+            let b = input52.value;
+            input51.value = b;
+            input52.value = a;
+        });
+
+        //  ============= 156.7 =============
+        console.log('\n// === №156.7 ===');
+
+        let button7 = document.querySelector('#button7');
+        let p7 = document.querySelector('#p7');
+        let div7 = document.querySelector('#test');
+
+
+        button7.addEventListener('click', () => {
+            let arrInDiv = div7.querySelectorAll('input');
+            let count = 0;
+            let sum = 0;
+            for (elem of arrInDiv) {
+                if (elem.value.length > 0) {
+                    sum += Number(elem.value);
+                    count++;
+                }
+            }
+            if (sum != 0 && count != 0) {
+                console.log(sum / count);
+                p7.innerHTML = sum / count;
+            } else p7.innerHTML = 0;
+        })
     </script>
 
 </body>

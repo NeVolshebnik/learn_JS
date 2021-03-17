@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ============= 155.1 ============= -->
+    <p>=== 155.1 ===</p>
+
+    <input id="elem1" type="email">
+    <button id='button1'>Нажать</button>
+
+    <!-- ============= 155.2 ============= -->
+    <p>=== 155.2 ===</p>
+
+    <input id="elem2" type="email">
+    <button id='button2'>Нажать</button>
+
+    <!-- ============= 155.3 ============= -->
+    <p>=== 155.3 ===</p>
+
+    <a href="http://google.com">Здесь ссылка</a>
+    <p id='elem3'><br></p>
+    <button id='button3'>Нажать</button>
+
+    <!-- ============= 155.4 ============= -->
+    <p>=== 155.4 ===</p>
+
+    <button id='button4'>Нажать</button>
+
+    <!-- ============= 155.5 ============= -->
+    <p>=== 155.5 ===</p>
+
+    <img id="img5" src="https://webformyself.com/javascript/img/icon-js.png" height="100" width="100">
+    <p id="elem5"><br></p>
+    <button id="button5">Нажать</button>
+
+    <!-- ============= 155.6 ============= -->
+    <p>=== 155.6 ===</p>
+
+    <button id="button6">Нажать</button>
+
+    <!-- ============= 155.7 ============= -->
+    <p>=== 155.7 ===</p>
+
+    <button id="button7">Нажать</button>
+
+    <!-- ============= 155.8 ============= -->
+    <p>=== 155.8 ===</p>
+
+    <img id="img8" height="100">
+    <br>
+    <button id="button8">Первая</button>
+    <button id="button9">Вторая</button>
+
+    <script>
+        //  ============= 155.1 =============
+        console.log('\n// === №155.1 ===');
+
+        let elem1 = document.querySelector('#elem1');
+        let button = document.querySelector('#button1');
+
+        button.addEventListener('click', () => {
+            console.log(elem1.type);
+        });
+
+        //  ============= 155.2 =============
+        console.log('\n// === №155.2 ===');
+
+        let elem2 = document.querySelector('#elem2');
+        let button2 = document.querySelector('#button2');
+
+        button2.addEventListener('click', () => {
+            elem2.type = 'submit';
+        });
+
+        //  ============= 155.3 =============
+        console.log('\n// === №155.3 ===');
+
+        let elem3 = document.querySelector('#elem3');
+        let button3 = document.querySelector('#button3');
+        let a = document.querySelector('a');
+
+        button3.addEventListener('click', () => {
+            elem3.innerHTML = a.href;
+        });
+
+        //  ============= 155.4 =============
+        console.log('\n// === №155.4 ===');
+
+        let button4 = document.querySelector('#button4');
+
+        button4.addEventListener('click', () => {
+            a.innerHTML += ` (${a.href})`;
+        })
+
+        //  ============= 155.5 =============
+        console.log('\n// === №155.5 ===');
+        let elem5 = document.querySelector('#elem5');
+        let button5 = document.querySelector('#button5');
+        button5.addEventListener('click', () => {
+            elem5.innerHTML = document.querySelector('#img5').src;
+        });
+
+        //  ============= 155.6 =============
+        console.log('\n// === №155.6 ===');
+
+        let button6 = document.querySelector('#button6');
+        button6.addEventListener('click', () => {
+            document.querySelector('#img5').width = '300';
+        });
+
+        //  ============= 155.7 =============
+        console.log('\n// === №155.7 ===');
+
+        let img5 = document.querySelector('#img5');
+        let button7 = document.querySelector('#button7');
+        button7.addEventListener('click', () => {
+            img5.width = img5.width * 2;
+        });
+
+        //  ============= 155.8 =============
+        console.log('\n// === №155.8 ===');
+
+        let img8 = document.querySelector('#img8');
+        let button8 = document.querySelector('#button8');
+        let button9 = document.querySelector('#button9');
+        button8.addEventListener('click', () => {
+            img8.src = "https://webformyself.com/javascript/img/icon-js.png"
+        });
+        button9.addEventListener('click', () => {
+            img8.src = "https://rcnit.com.ua/wp-content/uploads/2016/10/js.jpg"
+        });
+    </script>
+
+</body>
+
+</html>
