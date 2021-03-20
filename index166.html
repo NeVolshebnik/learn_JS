@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ============= 166.1 ============= -->
+    <p>=== 166.1 ===</p>
+
+    <input id="elem1" value="text">
+
+    <!-- ============= 166.2 ============= -->
+    <p>=== 166.2 ===</p>
+
+    <input id="elem2" class="www zzz">
+
+    <!-- ============= 166.3 ============= -->
+    <p>=== 166.3 ===</p>
+
+    <input id="elem3">
+    <button id="button3">Жми</button>
+
+    <!-- ============= 166.4 ============= -->
+    <p>=== 166.4 ===</p>
+
+    <input id="elem4">
+
+    <!-- ============= 166.5 ============= -->
+    <p>=== 166.5 ===</p>
+
+    <input id="elem5" value="text">
+
+    <!-- ============= 166.6 ============= -->
+    <p>=== 166.6 ===</p>
+
+    <input id="elem6" value="text">
+
+    <script>
+        //  ============= 166.1 =============
+        console.log('\n// === №166.1 ===');
+
+        let elem1 = document.querySelector('#elem1');
+        console.log(elem1.getAttribute('value'));
+
+        //  ============= 166.2 =============
+        console.log('\n// === №166.2 ===');
+
+        let elem2 = document.querySelector('#elem2');
+        console.log(elem2.getAttribute('class'));
+
+        //  ============= 166.3 =============
+        console.log('\n// === №166.3 ===');
+
+        let button3 = document.querySelector('#button3');
+        button3.addEventListener('click', function() {
+            let elem3 = document.querySelector('#elem3')
+            elem3.setAttribute('value', 'text')
+        })
+
+        //  ============= 166.4 =============
+        console.log('\n// === №166.4 ===');
+
+        document.querySelector('#elem4').setAttribute('class', 'valid');
+        console.log(document.querySelector('#elem4').getAttribute('class'));
+
+        //  ============= 166.5 =============
+        console.log('\n// === №166.5 ===');
+
+        let elem5 = document.querySelector('#elem5');
+        elem5.removeAttribute('value');
+
+        //  ============= 166.6 =============
+        console.log('\n// === №166.6 ===');
+
+        let elem6 = document.querySelector('#elem6');
+        console.log(elem6.hasAttribute('value'));
+    </script>
+
+</body>
+
+</html>

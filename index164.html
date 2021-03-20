@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ============= 164.1 ============= -->
+    <p>=== 164.1 ===</p>
+
+    <p>Здесь</p>
+    <p>могла</p>
+    <p>быть</p>
+    <p>ваша</p>
+    <p>реклама</p>
+
+    <script>
+        //  ============= 164.1 =============
+        console.log('\n// === №164.1 ===');
+
+        let p_array = document.querySelectorAll('p');
+        for (let p of p_array) {
+            p.addEventListener('click', func1);
+        }
+
+        function func1() {
+            this.innerHTML = this.innerHTML + '!';
+            this.removeEventListener('click', func1);
+        }
+    </script>
+
+</body>
+
+</html>

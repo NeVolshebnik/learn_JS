@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ============= 163.1 ============= -->
+    <p>=== 163.1 ===</p>
+
+    <a href="https://google.com">Ссылка здесь</a>
+
+    <!-- ============= 163.2 ============= -->
+    <p>=== 163.2 ===</p>
+
+    <button id="button2">1</button>
+
+    <script>
+        //  ============= 163.1 =============
+        console.log('\n// === №163.1 ===');
+
+        let url = document.querySelector('a');
+        url.addEventListener('click', func1)
+
+        function func1() {
+            url.innerHTML = url.innerHTML + ` (${url.href})`
+            url.removeEventListener('click', func1)
+        }
+
+        //  ============= 163.2 =============
+        console.log('\n// === №163.2 ===');
+
+        let button2 = document.querySelector('#button2');
+
+        button2.addEventListener('click', func2);
+
+        function func2() {
+            this.innerHTML = Number(this.innerHTML) + 1;
+            if (Number(this.innerHTML) == 10) {
+                this.removeEventListener('click', func2);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ============= 158.1 ============= -->
+    <p>=== 158.1 ===</p>
+
+    <div id="elem" class="content no-gap"></div>
+
+    <!-- ============= 158.2 ============= -->
+    <p>=== 158.2 ===</p>
+
+    <div id="elem2"></div>
+
+    <!-- ============= 158.3 ============= -->
+    <p>=== 158.3 ===</p>
+
+    <div id="elem3" class="aaa bbb ccc"></div>
+    <button id="button3">Массив классов</button>
+
+    <script>
+        //  ============= 158.1 =============
+        console.log('\n// === №158.1 ===');
+
+        console.log(document.querySelector('#elem').className);
+
+        //  ============= 158.2 =============
+        console.log('\n// === №158.2 ===');
+
+        let elem2 = document.querySelector('#elem2');
+        elem2.className = 'content no-gap';
+
+        //  ============= 158.3 =============
+        console.log('\n// === №158.3 ===');
+
+        let elem3 = document.querySelector('#elem3');
+        let button3 = document.querySelector('#button3');
+        button3.addEventListener('click', () => {
+            let arr = elem3.className.split(' ')
+            console.log(arr);
+        })
+    </script>
+
+</body>
+
+</html>

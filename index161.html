@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ============= 161.1 ============= -->
+    <p>=== 161.1 ===</p>
+
+    <p id="p11" class="test">123</p>
+    <p id="p12" class="test">456</p>
+    <p id="p13" class="test">789</p>
+
+    <button id="button1">Нажми</button>
+
+    <!-- ============= 161.2 ============= -->
+    <p>=== 161.2 ===</p>
+
+    <p class="test1">Здесь</p>
+    <p class="test1">могла</p>
+    <p class="test1">быть</p>
+
+    <button id="button2">Жми</button>
+
+    <!-- ============= 161.3 ============= -->
+    <p>=== 161.3 ===</p>
+
+    <input type="number" class="test3" id="input31" style="margin: 1rem;">
+    <input type="number" class="test3" id="input32" style="margin: 1rem;">
+    <input type="number" class="test3" id="input33" style="margin: 1rem;">
+
+    <p id="p3"><br></p>
+
+    <button id="button3">Нажать</button>
+
+    <script>
+        //  ============= 161.1 =============
+        console.log('\n// === №161.1 ===');
+
+        let button1 = document.querySelector('#button1');
+        button1.addEventListener('click', func1);
+
+        function func1() {
+            let p_test_all = document.querySelectorAll('.test');
+            for (let elem of p_test_all) {
+                elem.innerHTML = 'text';
+            }
+        }
+
+        //  ============= 161.2 =============
+        console.log('\n// === №161.2 ===');
+
+        let button2 = document.querySelector('#button2');
+        button2.addEventListener('click', func2);
+
+        function func2() {
+            let arr = document.querySelectorAll('.test1');
+            for (let i = 0; i < arr.length; i++) {
+                arr[i].innerHTML = arr[i].innerHTML + ` [${i}]`
+            }
+        }
+
+        //  ============= 161.3 =============
+        console.log('\n// === №161.3 ===');
+
+        let button3 = document.querySelector('#button3');
+        button3.addEventListener('click', func3);
+
+        function func3() {
+            let arrElem = document.querySelectorAll('.test3');
+            let sum = 0;
+            for (elem of arrElem) {
+                sum += Number(elem.value);
+            }
+            document.querySelector('#p3').innerHTML = sum;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ============= 157.1 ============= -->
+    <p>=== 157.1 ===</p>
+
+    <input id="input1">
+
+    <!-- ============= 157.2 ============= -->
+    <p>=== 157.2 ===</p>
+
+    <input id="input2">
+
+    <!-- ============= 157.3 ============= -->
+    <p>=== 157.3 ===</p>
+
+    <input type="text" id="input3" value="здесь какой-то текст">
+
+    <script>
+        //  ============= 157.1 =============
+        console.log('\n// === №157.1 ===');
+
+        let input1 = document.querySelector('#input1');
+        input1.addEventListener('focus', () => {
+            input1.value = 1;
+        });
+        input1.addEventListener('blur', () => {
+            input1.value = 2;
+        });
+
+        //  ============= 157.2 =============
+        console.log('\n// === №157.2 ===');
+
+        let input2 = document.querySelector('#input2');
+        input2.addEventListener('blur', function() {
+            alert(input2.value ** 2)
+        });
+
+        //  ============= 157.3 =============
+        console.log('\n// === №157.3 ===');
+
+        let input3 = document.querySelector('#input3');
+        input3.addEventListener('focus', function() {
+            input3.value = '';
+        })
+    </script>
+
+</body>
+
+</html>

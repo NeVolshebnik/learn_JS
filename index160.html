@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ============= 160.1 ============= -->
+    <p>=== 160.1 ===</p>
+
+    <input id="input1">
+
+    <!-- ============= 160.2 ============= -->
+    <p>=== 160.2 ===</p>
+
+    <button id="button2">1</button>
+
+    <!-- ============= 160.3 ============= -->
+    <p>=== 160.3 ===</p>
+
+    <p id="p1">Здесь</p>
+    <p id="p2">могла</p>
+    <p id="p3">быть</p>
+    <p id="p4">ваша</p>
+    <p id="p5">реклама</p>
+
+    <!-- ============= 160.4 ============= -->
+    <p>=== 160.4 ===</p>
+
+    <input style="margin: 10px;" id="input4" type="number"><br>
+    <input id="input5" type="number" style="margin: 10px;"><br>
+    <input type="number" id="input6" style="margin: 10px;"><br>
+
+    <script>
+        //  ============= 160.1 =============
+        console.log('\n// === №160.1 ===');
+
+        let input1 = document.querySelector('#input1');
+        input1.addEventListener('focus', function() {
+            this.value = 1;
+        })
+        input1.addEventListener('blur', function() {
+            this.value = 2;
+        });
+
+        //  ============= 160.2 =============
+        console.log('\n// === №160.2 ===');
+
+        let button2 = document.querySelector('#button2');
+        button2.addEventListener('click', function() {
+            this.innerHTML = Number(this.innerHTML) + 1;
+        });
+
+        //  ============= 160.3 =============
+        console.log('\n// === №160.3 ===');
+
+        let func1 = function() {
+            this.innerHTML = this.innerHTML + '!';
+        }
+
+        let p1 = document.querySelector('#p1');
+        let p2 = document.querySelector('#p2');
+        let p3 = document.querySelector('#p3');
+        let p4 = document.querySelector('#p4');
+        let p5 = document.querySelector('#p5');
+
+        p1.addEventListener('click', func1);
+        p2.addEventListener('click', func1);
+        p3.addEventListener('click', func1);
+        p4.addEventListener('click', func1);
+        p5.addEventListener('click', func1);
+
+        //  ============= 160.4 =============
+        console.log('\n// === №160.4 ===');
+
+        let input4 = document.querySelector('#input4');
+        let input5 = document.querySelector('#input5');
+        let input6 = document.querySelector('#input6');
+
+        input4.addEventListener('blur', func2);
+        input5.addEventListener('blur', func2);
+        input6.addEventListener('blur', func2);
+
+        function func2() {
+            this.value = this.value ** 2
+        }
+    </script>
+
+</body>
+
+</html>
